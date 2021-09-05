@@ -1,5 +1,8 @@
 name: Publish Docker Image
 
+# TODO: Figure out how to publish this on multiple architectures.
+# One possibility: https://github.com/marketplace/actions/run-on-architecture
+
 on:
   release:
     types: [ published ]

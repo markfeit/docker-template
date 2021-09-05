@@ -1,0 +1,4 @@
+# Files we don't care about.
+
+*~
+.built

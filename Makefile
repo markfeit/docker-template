@@ -19,6 +19,8 @@ FROM := alpine:latest
 # execute app/run instead.
 # SUPERVISED := 1
 
+# Additional arguments to pass to docker run
+# RUN_ARGS := --volume=/abc:/xyz --publish=1234:1234
 
 #
 # No user-serviceable parts beyond this point.
@@ -82,7 +84,7 @@ run: clean $(DOCKERFILE)
 	@echo '# Running Container'
 	@echo '#'
 	@echo
-	docker run -it $(NAME)
+	docker run -it $(RUN_ARGS) $(NAME)
 
 
 # Prepare for a release by generating the Dockerfile
